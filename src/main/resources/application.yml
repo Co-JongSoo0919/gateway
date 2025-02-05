@@ -1,2 +1,7 @@
 server:
   port: 80
+
+
+
+jwt:
+  secret: JpbI47YNiZnIzGoaN04zWxAS3Siqe+3rbigo3/0NcHU=
