@@ -1,0 +1,16 @@
+server:
+  port: 80
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origins: "http://localhost:5173"
+            allowed-methods: "GET, POST, PUT, DELETE, OPTIONS"
+            allowed-headers: "*"
+            allow-credentials: true
+
+jwt:
+  secret: JpbI47YNiZnIzGoaN04zWxAS3Siqe+3rbigo3/0NcHU=
