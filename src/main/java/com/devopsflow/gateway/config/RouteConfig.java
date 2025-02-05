@@ -10,9 +10,10 @@ public class RouteConfig {
     @Bean
     public RouteLocator routes(RouteLocatorBuilder builder) {
         return builder.routes()
+                .route("auth_route", r -> r.path("/auth/**").filters(f -> f.rewritePath("/portal/(?<segment>.*)", "/${segment}"))
+                        .uri("http://localhost:8080"))
                 .route("portal_route", r -> r.path("/portal/**").filters(f -> f.rewritePath("/portal/(?<segment>.*)", "/${segment}"))
                         .uri("http://localhost:8081"))
                 .build();
     }
-
 }
